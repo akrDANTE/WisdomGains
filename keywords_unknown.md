@@ -1,0 +1,12 @@
+# Keywords to study
+- pyproject.toml [done]
+- locks file in packages [done]
+- ruff for linting and formatting python projects
+- wheel files and building in python
+- python build systems: setuptools etc
+- pyd files (so like in linux)
+- dll/so files loading
+- ELF file format
+- Linux kernel
+- stdout, stdin, pipes etc.
+- SQL : set-based language [done]

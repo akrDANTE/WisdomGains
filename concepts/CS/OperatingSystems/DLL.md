@@ -1,0 +1,5 @@
+# Dynamic Linked Library/ Shared Objects
+
+## Definition
+The dynamic link libraries are compiled source code files which are generally not the part of an executable file. These files are compiled in such a way that they can be loaded(what is the structure of dlls? Do they have main entry point in them?), these are loaded in the memory on demand when required by the code.  
+These can be added to the executable in two ways link time loading and runtime loading. Link time loading stores a mapping of the functions which are required by the executable by baking the function mapping directly into the executable. Runtime loading is different in this we use utility functions like dlopen etc. to load the library and other function to find the required function and use it. But external functions are loaded dynamically in both cases into the address space of the executable.

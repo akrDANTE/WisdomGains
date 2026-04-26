@@ -10,3 +10,5 @@
 - Linux kernel
 - stdout, stdin, pipes etc.
 - SQL : set-based language [done]
+- python descriptors
+- yield and generators

@@ -2,7 +2,9 @@ import time
 from threading import Thread, current_thread
 
 """
-Threads in python are not really parallel, they are concurrent and are scheduled by time slicing.
+Threads in python are not really parallel, they are concurrent and are scheduled by time slicing. OS decides which thread should run based on scheduling scheme.
+In case of python there is GIL which allows only one thread to execute python bytecode at a time, which effectly is not real parallel execution but is concurrent.
+To use actual parallelism we use multiprocessing in python.
 Threads are useful when we are dealing with blocking I/O and we need isolation between threads.
 """
 

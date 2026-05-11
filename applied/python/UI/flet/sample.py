@@ -12,6 +12,7 @@ def main(page: ft.Page):
         tasks_view.controls.append(Checkbox(label=new_task.value))
         new_task.value = ""
         view.update()
+        # page.update()
 
     new_task = TextField(hint_text="Whats needs to be done?", expand=True)
     tasks_view = ft.Column()

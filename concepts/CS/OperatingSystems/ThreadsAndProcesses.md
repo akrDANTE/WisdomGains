@@ -15,4 +15,22 @@ Parallelism is when two or more processes/threads are working simulataneously an
 - Processes need to be synchronized.
 - Deadlocks, starvation, race conditions
 - resource leakage, zombie processes, threads, cleanup.
-- memory corruption can happen
+- memory corruption can happen.
+- Code is difficult to understand and is also difficult to debug.
+
+## How to decide which concurrency model to use?
+- Check for cpu bound vs I/O bound processing
+- Check for blocking and non blocking I/O
+- Check for memory and CPU usage constraints
+- Use asyncio for non blocking I/O which internally uses event loop and yielding functions(generators). Also known as coroutines.
+- Use threads when blocking I/O and isolation is required.
+- Use processes when cpu bound and strong isolation is required and parallellization of tasks is possible.
+- Use combination of processes and asyncio for optimal usage of resources.
+
+## Threads in detail
+- A thread is the smallest unit of execution that can be scheduled by the OS. 
+- A single program/process has at least one thread of execution called main thread. 
+- There can be many threads executing in a single program. They can be running parallel on different CPU cores and also they can be running concurrently using time slicing/interleaving of threads.
+- Threads are useful when we want to make most of our CPU time. We use threads when we need concurrent programming like one thread for UI and other for processing the user input. So, the user interface is interactive and not stuck and lagging. 
+- Also they can be used when we can parallelize our work, that is we can solve two parts of the problem independently in different threads. 
+- Threads in python are generally not truly parallel they are concurrently executing.
